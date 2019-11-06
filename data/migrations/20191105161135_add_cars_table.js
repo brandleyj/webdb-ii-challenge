@@ -3,12 +3,12 @@ exports.up = function(knex) {
 		table.increments();
 
 		table.string("VIN", 255).notNullable();
-		table.string("make").notNullable();
-		table.string("model").notNullable();
-		table.float("mileage").notNullable();
+		table.string("make", 100).notNullable();
+		table.string("model", 100).notNullable();
+		table.float("mileage", 100).notNullable();
 
-		table.string("transmission");
-		table.string("title");
+		table.string("transmission", 100);
+		table.string("title", 15);
 		table.timestamps(true, true);
 	});
 };
